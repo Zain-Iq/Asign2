@@ -1,0 +1,16 @@
+name: Random Commit Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  random-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Do nothing (for green check)
+        run: echo "This is a random commit. The workflow is running successfully!"
